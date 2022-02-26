@@ -6,6 +6,7 @@
       viewBox="0 0 264.000000 257.000000"
       preserveAspectRatio="xMidYMid meet"
       class="svg"
+      v-show="hover"
     >
       <g transform="translate(0.000000,257.000000) scale(0.100000,-0.100000)">
         <path
