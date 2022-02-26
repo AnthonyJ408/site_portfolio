@@ -21,10 +21,6 @@
 }
 
 @keyframes up {
-    0%{
-
-    }
-
     80% {
        
         margin: 0 5vw ;
@@ -54,13 +50,7 @@
 //Hover button drawing animations
   
   @keyframes dash {
-      0%{
-        
-        
-
-      }
     100% {
-      stroke-dashoffset: -100;
-      
+      stroke-dashoffset: -100;    
     }
   }

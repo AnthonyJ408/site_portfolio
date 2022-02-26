@@ -216,11 +216,11 @@ export default {
   position: absolute;
   float: inherit;
   z-index: -1;
-  width: 100px;
-  height: 100px;
+  width: 8vh;
+  height: 8vh;
   path {
     fill: none;
-    stroke: #008f11;
+    stroke: #68ff00;
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
     stroke-width: 15px;
@@ -239,33 +239,23 @@ export default {
   animation: goDown 4000ms forwards ease-in-out;
   justify-content: space-evenly;
   &--0 {
-    width: 100px;
-    height: 100px;
     opacity: 0;
     animation: up 2000ms 4050ms forwards ease-in-out;
   }
 
   &--1 {
-    width: 100px;
-    height: 100px;
     opacity: 0;
     animation: appear 2000ms 4050ms forwards ease-in-out;
   }
   &--2 {
-    width: 100px;
-    height: 100px;
     animation: down 2000ms 4050ms forwards ease-in-out;
   }
   &--3 {
-    width: 100px;
-    height: 100px;
     opacity: 0;
 
     animation: appear 2000ms 4050ms forwards ease-in-out;
   }
   &--4 {
-    width: 100px;
-    height: 100px;
     opacity: 0;
 
     animation: up 2000ms 4050ms forwards ease-in-out;
@@ -273,8 +263,8 @@ export default {
 }
 
 .rounded {
-  width: 100px;
-  height: 100px;
+  width: 8vh;
+  height: 8vh;
   border-radius: 100%;
 }
 </style>

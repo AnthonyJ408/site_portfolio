@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld msg="JAMMES Anthony, Développeur web" />
+  <HelloWorld />
 </template>
 
 <script>
@@ -18,11 +18,14 @@ body {
   margin: 0px;
 }
 #app {
+  z-index: -2;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  /* background-image: url("./assets/circuit_background.jpg"); */
-  /* padding: 2vh; */
+  width: 100vw;
+  height: 100vh;
+  background: #000046;
+  background: -webkit-radial-gradient(circle, #1cb5e0, #000046);
+  background: radial-gradient(circle, #1cb5e0, #000046);
 }
 </style>
