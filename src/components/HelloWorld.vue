@@ -139,47 +139,47 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
     <div class="loader_welcome">
       <div class="loader_welcome--0">
         <button
-          @mouseover="getBoundingBox('.loader_welcome--0')"
+          @mouseover="getPosition('.loader_welcome--0', '#ff1f71')"
           @mouseleave="hover = false"
           class="rounded"
         >
-          CLICK
+          <i class="fa fa-user"></i>
         </button>
       </div>
       <div class="loader_welcome--1">
         <button
-          @mouseover="getBoundingBox('.loader_welcome--1')"
+          @mouseover="getPosition('.loader_welcome--1', '#2bd2ff')"
           @mouseleave="hover = false"
           class="rounded"
         >
-          CLICK
+          <i class="fa fa-code"></i>
         </button>
       </div>
       <div class="loader_welcome--2">
         <button
-          @mouseover="getBoundingBox('.loader_welcome--2')"
+          @mouseover="getPosition('.loader_welcome--2', '#00fa9a')"
           @mouseleave="hover = false"
           class="rounded"
         >
-          CLICK
+          <i class="fa fa-home"></i>
         </button>
       </div>
       <div class="loader_welcome--3">
         <button
-          @mouseover="getBoundingBox('.loader_welcome--3')"
+          @mouseover="getPosition('.loader_welcome--3', '#8f00f1')"
           @mouseleave="hover = false"
           class="rounded"
         >
-          CLICK
+          <i class="fa fa-download"></i>
         </button>
       </div>
       <div class="loader_welcome--4">
         <button
-          @mouseover="getBoundingBox('.loader_welcome--4')"
+          @mouseover="getPosition('.loader_welcome--4', '#fff600')"
           @mouseleave="hover = false"
           class="rounded"
         >
-          CLICK
+          <i class="fa fa-commenting-o"></i>
         </button>
       </div>
     </div>
@@ -192,19 +192,31 @@ export default {
   data() {
     return {
       hover: false,
+      created: false,
     };
   },
-  created() {},
+  created() {
+    setTimeout(this.isAnimationFinish, 5051);
+  },
   methods: {
-    getBoundingBox(element) {
-      const object = document.querySelector(element);
-      const box = object.getBoundingClientRect();
-      const svg = document.querySelector(".svg");
-      svg.style.top = box.top + "px";
-      svg.style.left = box.left + "px";
-      console.log(svg);
-
-      return (this.hover = true);
+    getPosition(element, color) {
+      if (this.created == true) {
+        const object = document.querySelector(element);
+        const box = object.getBoundingClientRect();
+        const svg = document.querySelector(".svg");
+        svg.style.top = box.top + "px";
+        svg.style.left = box.left + "px";
+        svg.style.stroke = color;
+        console.log(svg);
+        return (this.hover = true);
+      }
+    },
+    isAnimationFinish() {
+      const animation = document.querySelector(".loader_welcome--0");
+      animation.addEventListener("animationend", () => {
+        console.log("Animated");
+        return (this.created = true);
+      });
     },
   },
 };
@@ -212,7 +224,7 @@ export default {
 
 <style lang="scss" scoped>
 .svg {
-  transform: scale(2.2);
+  transform: scale(2);
   position: absolute;
   float: inherit;
   z-index: -1;
@@ -220,7 +232,6 @@ export default {
   height: 8vh;
   path {
     fill: none;
-    stroke: #68ff00;
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
     stroke-width: 15px;
@@ -241,30 +252,83 @@ export default {
   &--0 {
     opacity: 0;
     animation: up 2000ms 4050ms forwards ease-in-out;
+    & > .rounded {
+      border: double map.get($buttonColor, ".loader_welcome--0");
+      color: map.get($buttonColor, ".loader_welcome--0");
+    }
   }
 
   &--1 {
     opacity: 0;
     animation: appear 2000ms 4050ms forwards ease-in-out;
+    & > .rounded {
+      border: double map.get($buttonColor, ".loader_welcome--1");
+      color: map.get($buttonColor, ".loader_welcome--1");
+    }
   }
   &--2 {
     animation: down 2000ms 4050ms forwards ease-in-out;
+    & > .rounded {
+      border: double map.get($buttonColor, ".loader_welcome--2");
+      color: map.get($buttonColor, ".loader_welcome--2");
+    }
   }
   &--3 {
     opacity: 0;
 
     animation: appear 2000ms 4050ms forwards ease-in-out;
+    & > .rounded {
+      border: double map.get($buttonColor, ".loader_welcome--3");
+      color: map.get($buttonColor, ".loader_welcome--3");
+    }
   }
   &--4 {
     opacity: 0;
 
     animation: up 2000ms 4050ms forwards ease-in-out;
+    & > .rounded {
+      border: double map.get($buttonColor, ".loader_welcome--4");
+      color: map.get($buttonColor, ".loader_welcome--4");
+    }
   }
 }
 
 .rounded {
+  cursor: pointer;
   width: 8vh;
   height: 8vh;
-  border-radius: 100%;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+  color: #f4f4f4;
+  background: rgba(75, 73, 73, 0.363);
+  & i {
+    font-size: 2rem;
+  }
+  &:hover {
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(146, 148, 248, 0.4),
+      transparent
+    );
+    transition: all 650ms;
+  }
+
+  &:hover:before {
+    left: 100%;
+  }
 }
 </style>
