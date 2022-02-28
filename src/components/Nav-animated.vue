@@ -1,16 +1,15 @@
 <template>
-  <main>
-    <svg
-      version="1.0"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 264.000000 257.000000"
-      preserveAspectRatio="xMidYMid meet"
-      class="svg"
-      v-show="hover"
-    >
-      <g transform="translate(0.000000,257.000000) scale(0.100000,-0.100000)">
-        <path
-          d="M1207 2542 c-23 -25 -21 -37 7 -59 17 -12 30 -39 42 -84 l17 -66 -60
+  <svg
+    version="1.0"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 264.000000 257.000000"
+    preserveAspectRatio="xMidYMid meet"
+    class="svg"
+    v-show="hover"
+  >
+    <g transform="translate(0.000000,257.000000) scale(0.100000,-0.100000)">
+      <path
+        d="M1207 2542 c-23 -25 -21 -37 7 -59 17 -12 30 -39 42 -84 l17 -66 -60
 -73 -61 -73 35 -81 c19 -45 37 -86 39 -92 3 -6 -24 -48 -61 -94 -36 -46 -65
 -87 -65 -91 0 -5 11 -42 25 -83 14 -41 25 -79 25 -85 0 -6 -17 -19 -39 -30
 l-38 -20 -7 61 c-3 33 -6 76 -6 95 0 33 -2 35 -87 75 -97 44 -135 61 -237 104
@@ -112,102 +111,110 @@ c197 -66 317 -233 317 -441 0 -145 -44 -243 -155 -345 -91 -86 -104 -93 -178
 7 24 12 38 10 21 -3 25 -8 25 -38z m-2474 -260 c25 -14 25 -56 0 -70 -11 -5
 -22 -10 -25 -10 -10 0 -36 32 -36 45 0 13 26 45 36 45 3 0 14 -5 25 -10z
 m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
-        />
-        <path
-          d="M1329 2263 c-11 -15 -11 -16 1 -5 20 17 47 15 59 -5 6 -10 11 -13 11
+      />
+      <path
+        d="M1329 2263 c-11 -15 -11 -16 1 -5 20 17 47 15 59 -5 6 -10 11 -13 11
 -7 1 32 -50 45 -71 17z"
-        />
-        <path
-          d="M582 2018 c-21 -21 -14 -57 13 -70 17 -8 29 -8 36 -1 6 6 3 9 -12 9
+      />
+      <path
+        d="M582 2018 c-21 -21 -14 -57 13 -70 17 -8 29 -8 36 -1 6 6 3 9 -12 9
 -30 -1 -47 28 -31 54 14 23 12 26 -6 8z"
-        />
-        <path
-          d="M1890 1879 c-7 -11 -9 -23 -7 -26 3 -2 8 5 12 17 5 16 13 20 33 18
+      />
+      <path
+        d="M1890 1879 c-7 -11 -9 -23 -7 -26 3 -2 8 5 12 17 5 16 13 20 33 18
 36 -4 42 -40 10 -62 -12 -9 -18 -16 -12 -16 15 0 44 34 44 51 0 40 -62 53 -80
 18z"
-        />
-        <path
-          d="M2118 460 c24 -10 29 -39 10 -58 -16 -16 -33 -15 -52 4 -9 8 -16 11
+      />
+      <path
+        d="M2118 460 c24 -10 29 -39 10 -58 -16 -16 -33 -15 -52 4 -9 8 -16 11
 -16 6 0 -19 30 -34 55 -28 45 11 42 87 -4 85 -11 0 -9 -3 7 -9z"
-        />
-        <path
-          d="M1486 327 c3 -10 9 -15 12 -12 3 3 0 11 -7 18 -10 9 -11 8 -5 -6z"
-        />
-      </g>
-    </svg>
-
-    <div class="loader_welcome">
-      <div class="loader_welcome--0">
+      />
+      <path
+        d="M1486 327 c3 -10 9 -15 12 -12 3 3 0 11 -7 18 -10 9 -11 8 -5 -6z"
+      />
+    </g>
+  </svg>
+  <div class="nav_text">
+    <p>{{ iconText }}</p>
+  </div>
+  <nav>
+    <ul class="loader_welcome">
+      <li class="loader_welcome--0">
         <button
-          @mouseover="getPosition('.loader_welcome--0', '#ff1f71')"
-          @mouseleave="hover = false"
+          @mouseover="getPosition('.loader_welcome--0', '#c0450b', 'About Me')"
+          @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
           <i class="fa fa-user"></i>
         </button>
-      </div>
-      <div class="loader_welcome--1">
+      </li>
+      <li class="loader_welcome--1">
         <button
-          @mouseover="getPosition('.loader_welcome--1', '#2bd2ff')"
-          @mouseleave="hover = false"
+          @mouseover="
+            getPosition('.loader_welcome--1', '#2bd2ff', 'My Projects')
+          "
+          @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
           <i class="fa fa-code"></i>
         </button>
-      </div>
-      <div class="loader_welcome--2">
+      </li>
+      <li class="loader_welcome--2">
         <button
-          @mouseover="getPosition('.loader_welcome--2', '#00fa9a')"
-          @mouseleave="hover = false"
+          @mouseover="getPosition('.loader_welcome--2', '#00fa9a', 'Home')"
+          @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
           <i class="fa fa-home"></i>
         </button>
-      </div>
-      <div class="loader_welcome--3">
+      </li>
+      <li class="loader_welcome--3">
         <button
-          @mouseover="getPosition('.loader_welcome--3', '#8f00f1')"
-          @mouseleave="hover = false"
+          @mouseover="getPosition('.loader_welcome--3', '#8f00f1', 'CV')"
+          @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
           <i class="fa fa-download"></i>
         </button>
-      </div>
-      <div class="loader_welcome--4">
+      </li>
+      <li class="loader_welcome--4">
         <button
-          @mouseover="getPosition('.loader_welcome--4', '#fff600')"
-          @mouseleave="hover = false"
+          @mouseover="getPosition('.loader_welcome--4', '#fff600', 'Contact')"
+          @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
           <i class="fa fa-commenting-o"></i>
         </button>
-      </div>
-    </div>
-  </main>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "NavAnimated",
   data() {
     return {
       hover: false,
       created: false,
+      iconText: "",
     };
   },
   created() {
-    setTimeout(this.isAnimationFinish, 5051);
+    setTimeout(this.isAnimationFinish, 2050);
   },
   methods: {
-    getPosition(element, color) {
+    getPosition(element, color, text) {
       if (this.created == true) {
         const object = document.querySelector(element);
+        const iconText = document.querySelector(".nav_text");
         const box = object.getBoundingClientRect();
         const svg = document.querySelector(".svg");
         svg.style.top = box.top + "px";
         svg.style.left = box.left + "px";
         svg.style.stroke = color;
-        console.log(svg);
+        this.iconText = text;
+        iconText.style.color = color;
         return (this.hover = true);
       }
     },
@@ -226,10 +233,8 @@ export default {
 .svg {
   transform: scale(2);
   position: absolute;
-  float: inherit;
   z-index: -1;
   width: 8vh;
-  height: 8vh;
   path {
     fill: none;
     stroke-dasharray: 2000;
@@ -247,11 +252,11 @@ export default {
 .loader_welcome {
   display: flex;
   width: 50%;
-  animation: goDown 4000ms forwards ease-in-out;
+  animation: goDown 2000ms forwards ease-in-out;
   justify-content: space-evenly;
   &--0 {
     opacity: 0;
-    animation: up 2000ms 4050ms forwards ease-in-out;
+    animation: up 2000ms 1500ms forwards ease-in-out;
     & > .rounded {
       border: double map.get($buttonColor, ".loader_welcome--0");
       color: map.get($buttonColor, ".loader_welcome--0");
@@ -260,14 +265,14 @@ export default {
 
   &--1 {
     opacity: 0;
-    animation: appear 2000ms 4050ms forwards ease-in-out;
+    animation: appear 2000ms 1500ms forwards ease-in-out;
     & > .rounded {
       border: double map.get($buttonColor, ".loader_welcome--1");
       color: map.get($buttonColor, ".loader_welcome--1");
     }
   }
   &--2 {
-    animation: down 2000ms 4050ms forwards ease-in-out;
+    animation: down 2000ms 1500ms forwards ease-in-out;
     & > .rounded {
       border: double map.get($buttonColor, ".loader_welcome--2");
       color: map.get($buttonColor, ".loader_welcome--2");
@@ -276,7 +281,7 @@ export default {
   &--3 {
     opacity: 0;
 
-    animation: appear 2000ms 4050ms forwards ease-in-out;
+    animation: appear 2000ms 1500ms forwards ease-in-out;
     & > .rounded {
       border: double map.get($buttonColor, ".loader_welcome--3");
       color: map.get($buttonColor, ".loader_welcome--3");
@@ -285,7 +290,7 @@ export default {
   &--4 {
     opacity: 0;
 
-    animation: up 2000ms 4050ms forwards ease-in-out;
+    animation: up 2000ms 1500ms forwards ease-in-out;
     & > .rounded {
       border: double map.get($buttonColor, ".loader_welcome--4");
       color: map.get($buttonColor, ".loader_welcome--4");
@@ -303,9 +308,9 @@ export default {
   position: relative;
   overflow: hidden;
   color: #f4f4f4;
-  background: rgba(75, 73, 73, 0.363);
+  background: transparent;
   & i {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   &:hover {
     box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
@@ -329,6 +334,17 @@ export default {
 
   &:hover:before {
     left: 100%;
+  }
+}
+.nav_text {
+  transform: translateY(2vh);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  & P {
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
 </style>

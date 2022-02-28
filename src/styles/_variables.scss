@@ -1,20 +1,20 @@
-$buttonColor: (".loader_welcome--0":#ff1f71,".loader_welcome--1":#2bd2ff, ".loader_welcome--2":#00fa9a, ".loader_welcome--3":#8f00f1,".loader_welcome--4":#fff600);
+$buttonColor: (".loader_welcome--0":#c0450b,".loader_welcome--1":#2bd2ff, ".loader_welcome--2":#00fa9a, ".loader_welcome--3":#8f00f1,".loader_welcome--4":#fff600);
 //Welcome animations
 @keyframes goDown {
     0%{
-        transform: translate(0vw,50vh);
+        transform: translate(0vw,-7vh);
     }
     50%{
-        transform: translate(50%, 50vh);
+        transform: translate(50%, -7vh);
     }
     100%{    
-        transform: translate(50%, 80vh);
+        transform: translate(50%, 7vh);
     }
 } 
 @keyframes down {
     100% {
         
-        transform: translateY(2vh);
+        transform: translateY(4vh);
     }
 }
 
@@ -33,6 +33,6 @@ $buttonColor: (".loader_welcome--0":#ff1f71,".loader_welcome--1":#2bd2ff, ".load
   
   @keyframes dash {
     100% {
-      stroke-dashoffset: -100;    
+      stroke-dashoffset: 0;    
     }
   }
