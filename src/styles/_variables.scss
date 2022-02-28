@@ -36,3 +36,12 @@ $buttonColor: (".loader_welcome--0":#c0450b,".loader_welcome--1":#2bd2ff, ".load
       stroke-dashoffset: 0;    
     }
   }
+//Pages growth 
+  @keyframes growth {
+      0% {
+          transform: scale(0);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
