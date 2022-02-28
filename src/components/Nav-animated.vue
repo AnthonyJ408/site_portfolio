@@ -141,7 +141,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
     <ul class="loader_welcome">
       <li class="loader_welcome--0">
         <button
-          @mouseover="getPosition('.loader_welcome--0', '#c0450b', 'About Me')"
+          @click="changePage('#51AB2C')"
+          @mouseover="getPosition('.loader_welcome--0', '#51AB2C', 'About Me')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -150,8 +151,9 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--1">
         <button
+          @click="changePage('#BC4BB5')"
           @mouseover="
-            getPosition('.loader_welcome--1', '#2bd2ff', 'My Projects')
+            getPosition('.loader_welcome--1', '#BC4BB5', 'My Projects')
           "
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
@@ -161,7 +163,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--2">
         <button
-          @mouseover="getPosition('.loader_welcome--2', '#00fa9a', 'Home')"
+          @click="changePage('#5B21E3')"
+          @mouseover="getPosition('.loader_welcome--2', '#5B21E3', 'Home')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -170,7 +173,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--3">
         <button
-          @mouseover="getPosition('.loader_welcome--3', '#8f00f1', 'CV')"
+          @click="changePage('#9A3E29')"
+          @mouseover="getPosition('.loader_welcome--3', '#9A3E29', 'CV')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -179,7 +183,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--4">
         <button
-          @mouseover="getPosition('.loader_welcome--4', '#fff600', 'Contact')"
+          @click="changePage('#CCA1A3')"
+          @mouseover="getPosition('.loader_welcome--4', '#CCA1A3', 'Contact')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -216,6 +221,17 @@ export default {
         this.iconText = text;
         iconText.style.color = color;
         return (this.hover = true);
+      }
+    },
+    changePage(color) {
+      if (this.created == true) {
+        const content = document.querySelector(".content");
+        content.style.boxShadow = "0px 0px 50px" + color;
+        const paths = document.querySelectorAll(".path");
+        for (let path of paths) {
+          path.style.stroke = color;
+        }
+        this.$parent.renderKey = color;
       }
     },
     isAnimationFinish() {
@@ -313,7 +329,7 @@ export default {
     font-size: 1.5rem;
   }
   &:hover {
-    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    box-shadow: 1px 1px 25px 5px rgba(146, 148, 248, 0.4);
   }
 
   &:before {
@@ -343,7 +359,7 @@ export default {
   justify-content: center;
   position: absolute;
   & P {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
   }
 }
