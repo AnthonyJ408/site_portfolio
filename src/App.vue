@@ -67,6 +67,7 @@ body {
 }
 
 section {
+  height: 75vh;
   animation: growth 600ms 2500ms ease-in-out;
   padding: 5vh 15vw 0 15vw;
 }
