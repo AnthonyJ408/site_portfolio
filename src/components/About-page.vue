@@ -74,7 +74,7 @@ p {
 }
 .myFace {
   opacity: 0.7;
-  height: 20vw;
+  height: 20vh;
   border-radius: 20%;
   box-shadow: 2px 2px 5px black;
 }
