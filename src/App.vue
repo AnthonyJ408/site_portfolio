@@ -68,8 +68,6 @@ body {
 
 section {
   animation: growth 600ms 2500ms ease-in-out;
-  height: 75vh;
-  font-size: 2.5rem;
   padding: 5vh 15vw 0 15vw;
 }
 </style>

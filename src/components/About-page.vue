@@ -6,11 +6,11 @@
       alt="Anthony jammes, Web developper"
     />
     <p class="me">
-      Hello, my name is Anthony, I live in Paris and my journey as a web
+      Hello, my name is Anthony. I live in Paris and my journey as a web
       developer officially started in 2021. I am a graduate of a Professional
-      Title level V. I am interested in a lot of things and the areas that keep
-      me awake are programming and internet. Today my project is to find a job
-      as a web developer, to apply my skills.
+      Title level V. I am interested in a lot of things and the domains that
+      keep me awake are programming and internet. Today my project is to find a
+      job as a web developer, to apply my skills.
     </p>
 
     <h1>About Me</h1>
@@ -62,13 +62,11 @@ h1 {
   width: 100%;
 }
 .me {
-  font-size: 1.2rem;
   margin: 0vh 5vh;
   width: 70%;
   text-align: center;
 }
 p {
-  font-size: 1.5rem;
   width: 50%;
   text-align: center;
 }
@@ -84,7 +82,7 @@ p {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  height: 30vh;
+  height: 40%;
 }
 .content {
   flex-wrap: nowrap;
@@ -97,8 +95,7 @@ p {
   align-items: center;
   position: relative;
   z-index: 2;
-  width: 100%;
-  height: 100%;
+  height: 75vh;
   border-radius: 25% 0% 25% 0%;
   box-shadow: 0px 0px 50px map.get($buttonColor, ".loader_welcome--0");
 }

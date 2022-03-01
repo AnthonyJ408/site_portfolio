@@ -24,8 +24,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  height: 75vh;
   border-radius: 25% 0% 25% 0%;
   box-shadow: 0px 0px 50px map.get($buttonColor, ".loader_welcome--2");
 }
