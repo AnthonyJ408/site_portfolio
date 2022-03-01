@@ -1,4 +1,4 @@
-$buttonColor: (".loader_welcome--0":#51AB2C,".loader_welcome--1":#BC4BB5, ".loader_welcome--2":#5B21E3, ".loader_welcome--3":#9A3E29,".loader_welcome--4":#CCA1A3);
+$buttonColor: (".loader_welcome--0":#5B21E3,".loader_welcome--1":#BC4BB5, ".loader_welcome--2":#51AB2C, ".loader_welcome--3":#9A3E29,".loader_welcome--4":#CCA1A3);
 //Welcome animations
 @keyframes goDown {
     0%{
@@ -41,7 +41,21 @@ $buttonColor: (".loader_welcome--0":#51AB2C,".loader_welcome--1":#BC4BB5, ".load
       0% {
           transform: scale(0);
       }
+      50% {
+        transform: scale(1.2);
+      }
       100% {
           transform: scale(1);
       }
   }
+@keyframes load {
+  0% { width: 0; }
+  100% { width:(var(--widthEnd))}
+}
+
+ @keyframes disapearTop {
+     100% {
+        transform: translate(50vw,0vh)
+     }
+ }
+  

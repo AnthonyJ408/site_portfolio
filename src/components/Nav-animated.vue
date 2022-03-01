@@ -141,8 +141,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
     <ul class="loader_welcome">
       <li class="loader_welcome--0">
         <button
-          @click="changePage('#51AB2C')"
-          @mouseover="getPosition('.loader_welcome--0', '#51AB2C', 'About Me')"
+          @click="changePage('#5B21E3', 'About Me')"
+          @mouseover="getPosition('.loader_welcome--0', '#5B21E3', 'About Me')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -151,7 +151,7 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--1">
         <button
-          @click="changePage('#BC4BB5')"
+          @click="changePage('#BC4BB5', 'My Projects')"
           @mouseover="
             getPosition('.loader_welcome--1', '#BC4BB5', 'My Projects')
           "
@@ -163,8 +163,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--2">
         <button
-          @click="changePage('#5B21E3')"
-          @mouseover="getPosition('.loader_welcome--2', '#5B21E3', 'Home')"
+          @click="changePage('#51AB2C', 'Home')"
+          @mouseover="getPosition('.loader_welcome--2', '#51AB2C', 'Home')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -173,7 +173,7 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--3">
         <button
-          @click="changePage('#9A3E29')"
+          @click="changePage('#9A3E29', 'CV')"
           @mouseover="getPosition('.loader_welcome--3', '#9A3E29', 'CV')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
@@ -183,7 +183,7 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--4">
         <button
-          @click="changePage('#CCA1A3')"
+          @click="changePage('#CCA1A3', 'Contact')"
           @mouseover="getPosition('.loader_welcome--4', '#CCA1A3', 'Contact')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
@@ -223,21 +223,21 @@ export default {
         return (this.hover = true);
       }
     },
-    changePage(color) {
+    changePage(color, page) {
       if (this.created == true) {
-        const content = document.querySelector(".content");
-        content.style.boxShadow = "0px 0px 50px" + color;
         const paths = document.querySelectorAll(".path");
         for (let path of paths) {
           path.style.stroke = color;
         }
         this.$parent.renderKey = color;
+        this.$parent.page = page;
       }
     },
     isAnimationFinish() {
       const animation = document.querySelector(".loader_welcome--0");
       animation.addEventListener("animationend", () => {
         console.log("Animated");
+        this.$parent.page = "Home";
         return (this.created = true);
       });
     },
@@ -359,7 +359,7 @@ export default {
   justify-content: center;
   position: absolute;
   & P {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 }
