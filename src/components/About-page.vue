@@ -76,7 +76,7 @@ export default {
 <style lang="scss" scoped>
 h1 {
   color: map.get($buttonColor, ".loader_welcome--0");
-  @include font-size(1.3, 3);
+  @include font-size(2.5, 3);
   text-align: center;
   grid-area: h1;
   margin: 2vh 0vh;
@@ -94,7 +94,7 @@ ul {
   margin-top: 2vh;
   opacity: 0.7;
   height: 250px;
-  max-height: 40vh;
+  max-height: 30vh;
   border-radius: 20%;
   box-shadow: 2px 2px 5px black;
 }

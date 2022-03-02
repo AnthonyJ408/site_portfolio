@@ -13,7 +13,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 h1 {
-  @include font-size(1.5, 3);
+  @include font-size(2.5, 3);
   color: map.get($buttonColor, ".loader_welcome--2");
   margin: 2vh 0vh;
 }
