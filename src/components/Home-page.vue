@@ -13,7 +13,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 h1 {
-  @include font-size(1.3, 3);
+  @include font-size(1.5, 3);
   color: map.get($buttonColor, ".loader_welcome--2");
   margin: 2vh 0vh;
 }
@@ -31,7 +31,7 @@ h1 {
       background: rgba(255, 255, 255, 0.2);
     }
   }
-  @include font-size(0.5, 2);
+  line-height: 1.4rem;
   scrollbar-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1);
   overflow: auto;
   scrollbar-width: thin;

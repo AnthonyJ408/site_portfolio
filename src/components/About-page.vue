@@ -18,56 +18,52 @@
     <ul>
       <li>
         <p>HTML5</p>
+        <div class="progress">
+          <div class="progress_value--html"></div>
+        </div>
       </li>
       <li>
         <p>CSS3</p>
+        <div class="progress">
+          <div class="progress_value--css"></div>
+        </div>
       </li>
       <li>
         <p>JavaScript</p>
+        <div class="progress">
+          <div class="progress_value--js"></div>
+        </div>
       </li>
       <li>
         <p>SQL/NoSQL</p>
+        <div class="progress">
+          <div class="progress_value--sql"></div>
+        </div>
       </li>
       <li>
         <p>Vue.js</p>
+        <div class="progress">
+          <div class="progress_value--vue"></div>
+        </div>
       </li>
       <li>
         <p>Node.js</p>
+        <div class="progress">
+          <div class="progress_value--node"></div>
+        </div>
       </li>
       <li>
         <p>SASS</p>
+
+        <div class="progress">
+          <div class="progress_value--sass"></div>
+        </div>
       </li>
       <li>
         <p>C#</p>
-      </li>
-    </ul>
-
-    <ul>
-      <li class="progress">
-        <div class="progress_value--html"></div>
-      </li>
-      <li class="progress">
-        <div class="progress_value--css"></div>
-      </li>
-      <li class="progress">
-        <div class="progress_value--js"></div>
-      </li>
-
-      <li class="progress">
-        <div class="progress_value--sql"></div>
-      </li>
-      <li class="progress">
-        <div class="progress_value--vue"></div>
-      </li>
-
-      <li class="progress">
-        <div class="progress_value--node"></div>
-      </li>
-      <li class="progress">
-        <div class="progress_value--sass"></div>
-      </li>
-      <li class="progress">
-        <div class="progress_value--c"></div>
+        <div class="progress">
+          <div class="progress_value--c"></div>
+        </div>
       </li>
     </ul>
   </div>
@@ -81,23 +77,27 @@ export default {
 h1 {
   color: map.get($buttonColor, ".loader_welcome--0");
   @include font-size(1.3, 3);
+  text-align: center;
+  grid-area: h1;
 }
-li {
-  margin: 1vh;
+ul {
+  grid-area: ul;
+  & li {
+    margin: 1vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
 }
-.cut {
-  width: 80%;
-  border: 1px solid map.get($buttonColor, ".loader_welcome--0");
-}
+
 .myFace {
   opacity: 0.7;
   height: 250px;
+  max-height: 40vh;
   border-radius: 20%;
   box-shadow: 2px 2px 5px black;
 }
 .me {
   width: 70%;
-  line-height: 1.4rem;
   text-align: center;
 }
 .content {
@@ -113,20 +113,20 @@ li {
       background: rgba(255, 255, 255, 0.2);
     }
   }
-  padding: 1vw;
+  padding: 1vh;
   color: white;
   display: grid;
   grid:
     [row1-start] "img p" 2fr [row1-end]
-    [row2-start] "h1 h1" 0.5fr [row2-end]
-    [row3-start] "ul bar" 2fr [row3-end]
+    [row2-start] "h1 h1" 1fr [row2-end]
+    [row3-start] "ul ul" 2fr [row3-end]
     / 1fr 2fr;
   align-items: center;
   justify-items: center;
   scrollbar-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1);
   scrollbar-width: thin;
   overflow: auto;
-  height: 75vh;
+  height: 73vh;
   border-radius: 3vh;
   box-shadow: 0px 0px 30px map.get($buttonColor, ".loader_welcome--0");
 }

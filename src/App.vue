@@ -42,7 +42,8 @@ export default {
 
 <style lang="scss">
 html {
-  @include font-size(0.7, 1.1);
+  @include font-size(0.5, 1.5);
+  line-height: 1.2rem;
 }
 body {
   margin: 0%;
@@ -70,8 +71,8 @@ body {
 }
 
 main {
-  height: 75vh;
+  height: 70vh;
   animation: growth 600ms 2500ms ease-in-out;
-  padding: 5vh 10vw 0 10vw;
+  padding: 5vh 10vw 5vh 10vw;
 }
 </style>
