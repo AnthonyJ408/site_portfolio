@@ -79,6 +79,7 @@ h1 {
   @include font-size(1.3, 3);
   text-align: center;
   grid-area: h1;
+  margin: 2vh 0vh;
 }
 ul {
   grid-area: ul;
@@ -90,6 +91,7 @@ ul {
 }
 
 .myFace {
+  margin-top: 2vh;
   opacity: 0.7;
   height: 250px;
   max-height: 40vh;
@@ -97,6 +99,7 @@ ul {
   box-shadow: 2px 2px 5px black;
 }
 .me {
+  margin-top: 2vh;
   width: 70%;
   text-align: center;
 }
