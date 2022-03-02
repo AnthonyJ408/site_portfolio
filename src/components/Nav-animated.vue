@@ -250,7 +250,7 @@ export default {
   transform: scale(2);
   position: absolute;
   z-index: -1;
-  width: 8vh;
+  width: 70px;
   path {
     fill: none;
     stroke-dasharray: 2000;
@@ -316,8 +316,8 @@ export default {
 
 .rounded {
   cursor: pointer;
-  width: 8vh;
-  height: 8vh;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   position: relative;
   border: 1px solid rgb(146, 148, 248);
@@ -326,7 +326,7 @@ export default {
   color: #f4f4f4;
   background: transparent;
   & i {
-    font-size: 1.5rem;
+    @include font-size(1, 2);
   }
   &:hover {
     box-shadow: 1px 1px 25px 5px rgba(146, 148, 248, 0.4);
@@ -359,7 +359,7 @@ export default {
   justify-content: center;
   position: absolute;
   & P {
-    font-size: 1.5rem;
+    @include font-size(1, 1.5);
     font-weight: bold;
   }
 }

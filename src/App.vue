@@ -1,13 +1,13 @@
 <template>
   <MeSvg /> <AnimatedSvg v-bind:color="renderKey" :key="renderKey" />
 
-  <section>
+  <main>
     <Transition> <HomePage v-if="page == 'Home'" /></Transition>
     <Transition> <AboutPage v-if="page == 'About Me'" /></Transition>
     <Transition> <ProjectsPage v-if="page == 'My Projects'" /></Transition>
     <Transition> <CvPage v-if="page == 'CV'" /></Transition>
     <Transition> <ContactPage v-if="page == 'Contact'" /></Transition>
-  </section>
+  </main>
   <NavAnimated />
 </template>
 
@@ -41,15 +41,19 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  @include font-size(0.7, 1.1);
+}
 body {
   margin: 0%;
 }
 #app {
+  overflow: hidden;
   z-index: 6;
   font-family: Helvetica, Arial, sans-serif;
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   max-width: 100vw;
   max-height: 100vh;
   background: rgb(0, 0, 0);
@@ -59,16 +63,15 @@ body {
     rgba(99, 99, 99, 1) 53%,
     rgb(14, 13, 13) 98%
   );
-  overflow: hidden;
 }
 
 .v-enter-active {
   animation: growth 600ms ease-in-out;
 }
 
-section {
+main {
   height: 75vh;
   animation: growth 600ms 2500ms ease-in-out;
-  padding: 5vh 15vw 0 15vw;
+  padding: 5vh 10vw 0 10vw;
 }
 </style>

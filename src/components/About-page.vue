@@ -12,42 +12,64 @@
       keep me awake are programming and internet. Today my project is to find a
       job as a web developer, to apply my skills.
     </p>
-
     <h1>About Me</h1>
-    <div class="row">
-      <p>HTML5</p>
-      <div class="progress">
+    <div class="cut"></div>
+
+    <ul>
+      <li>
+        <p>HTML5</p>
+      </li>
+      <li>
+        <p>CSS3</p>
+      </li>
+      <li>
+        <p>JavaScript</p>
+      </li>
+      <li>
+        <p>SQL/NoSQL</p>
+      </li>
+      <li>
+        <p>Vue.js</p>
+      </li>
+      <li>
+        <p>Node.js</p>
+      </li>
+      <li>
+        <p>SASS</p>
+      </li>
+      <li>
+        <p>C#</p>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="progress">
         <div class="progress_value--html"></div>
-      </div>
-      <p>CSS3</p>
-      <div class="progress">
+      </li>
+      <li class="progress">
         <div class="progress_value--css"></div>
-      </div>
-      <p>JavaScript</p>
-      <div class="progress">
+      </li>
+      <li class="progress">
         <div class="progress_value--js"></div>
-      </div>
-      <p>SQL/NoSQL</p>
-      <div class="progress">
+      </li>
+
+      <li class="progress">
         <div class="progress_value--sql"></div>
-      </div>
-      <p>Vue.js</p>
-      <div class="progress">
+      </li>
+      <li class="progress">
         <div class="progress_value--vue"></div>
-      </div>
-      <p>Node.js</p>
-      <div class="progress">
+      </li>
+
+      <li class="progress">
         <div class="progress_value--node"></div>
-      </div>
-      <p>SASS</p>
-      <div class="progress">
+      </li>
+      <li class="progress">
         <div class="progress_value--sass"></div>
-      </div>
-      <p>C#</p>
-      <div class="progress">
+      </li>
+      <li class="progress">
         <div class="progress_value--c"></div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 <script>
@@ -58,46 +80,55 @@ export default {
 <style lang="scss" scoped>
 h1 {
   color: map.get($buttonColor, ".loader_welcome--0");
-  text-align: center;
-  width: 100%;
+  @include font-size(1.3, 3);
 }
-.me {
-  margin: 0vh 5vh;
-  width: 70%;
-  text-align: center;
+li {
+  margin: 1vh;
 }
-p {
-  width: 50%;
-  text-align: center;
+.cut {
+  width: 80%;
+  border: 1px solid map.get($buttonColor, ".loader_welcome--0");
 }
 .myFace {
   opacity: 0.7;
-  height: 20vh;
+  height: 250px;
   border-radius: 20%;
   box-shadow: 2px 2px 5px black;
 }
-.row {
-  flex-direction: row;
-  align-content: space-between;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  height: 40%;
+.me {
+  width: 70%;
+  line-height: 1.4rem;
+  text-align: center;
 }
 .content {
-  flex-wrap: nowrap;
-  flex-direction: column;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+  padding: 1vw;
   color: white;
-  z-index: 2;
-  display: flex;
-  align-content: space-around;
-  justify-content: space-evenly;
+  display: grid;
+  grid:
+    [row1-start] "img p" 2fr [row1-end]
+    [row2-start] "h1 h1" 0.5fr [row2-end]
+    [row3-start] "ul bar" 2fr [row3-end]
+    / 1fr 2fr;
   align-items: center;
-  position: relative;
-  z-index: 2;
+  justify-items: center;
+  scrollbar-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1);
+  scrollbar-width: thin;
+  overflow: auto;
   height: 75vh;
-  border-radius: 25% 0% 25% 0%;
-  box-shadow: 0px 0px 50px map.get($buttonColor, ".loader_welcome--0");
+  border-radius: 3vh;
+  box-shadow: 0px 0px 30px map.get($buttonColor, ".loader_welcome--0");
 }
 .progress {
   background: rgba(255, 255, 255, 0.1);
@@ -108,7 +139,7 @@ p {
   padding: 0 5px;
   display: flex;
   height: 20px;
-  width: 30vw;
+  width: 40vw;
 }
 
 .progress_value {
