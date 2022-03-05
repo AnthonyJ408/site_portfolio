@@ -7,10 +7,11 @@
     />
     <p class="me">
       Hello, my name is Anthony. I live in Paris and my journey as a web
-      developer officially started in 2021. I am a graduate of a Professional
-      Title level V. I am interested in a lot of things and the domains that
-      keep me awake are programming and internet. Today my project is to find a
-      job as a web developer, to apply my skills.
+      developer officially started in 2021.
+      <br />I am a graduate of a Professional Title level V. <br />
+      I am interested in a lot of things and the domains that keep me awake are
+      programming and internet. <br />Today my project is to find a job as a web
+      developer, to apply my skills.
     </p>
     <h1>About Me</h1>
     <div class="cut"></div>
@@ -53,7 +54,7 @@
         </div>
       </li>
       <li>
-        <p>SASS</p>
+        <p>Sass</p>
 
         <div class="progress">
           <div class="progress_value--sass"></div>
@@ -63,6 +64,12 @@
         <p>C#</p>
         <div class="progress">
           <div class="progress_value--c"></div>
+        </div>
+      </li>
+      <li>
+        <p>Express.js</p>
+        <div class="progress">
+          <div class="progress_value--express"></div>
         </div>
       </li>
     </ul>
@@ -79,7 +86,7 @@ h1 {
   @include font-size(2.5, 3);
   text-align: center;
   grid-area: h1;
-  margin: 2vh 0vh;
+  margin: 5vh 0vh;
 }
 ul {
   grid-area: ul;
@@ -87,20 +94,23 @@ ul {
     margin: 1vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    align-items: center;
   }
 }
 
 .myFace {
-  margin-top: 2vh;
   opacity: 0.7;
   height: 250px;
-  max-height: 30vh;
+  @media (max-width: #{$widthMin}px) {
+    height: 150px;
+  }
+  margin-top: 2vh;
   border-radius: 20%;
   box-shadow: 2px 2px 5px black;
 }
 .me {
   margin-top: 2vh;
-  width: 70%;
+  width: 100%;
   text-align: center;
 }
 .content {
@@ -217,6 +227,15 @@ ul {
     width: 0;
     animation: load 3s normal forwards;
     --widthEnd: 15%;
+  }
+  &--express {
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: map.get($buttonColor, ".loader_welcome--0");
+    height: 10px;
+    width: 0;
+    animation: load 3s normal forwards;
+    --widthEnd: 30%;
   }
 }
 </style>

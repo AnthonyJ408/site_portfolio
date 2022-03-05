@@ -141,8 +141,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
     <ul class="loader_welcome">
       <li class="loader_welcome--0">
         <button
-          @click="changePage('#5B21E3', 'About Me')"
-          @mouseover="getPosition('.loader_welcome--0', '#5B21E3', 'About Me')"
+          @click="changePage('#F79B19', 'About Me')"
+          @mouseover="getPosition('.loader_welcome--0', '#F79B19', 'About Me')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -151,9 +151,9 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--1">
         <button
-          @click="changePage('#BC4BB5', 'My Projects')"
+          @click="changePage('#00A8CC', 'My Projects')"
           @mouseover="
-            getPosition('.loader_welcome--1', '#BC4BB5', 'My Projects')
+            getPosition('.loader_welcome--1', '#00A8CC', 'My Projects')
           "
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
@@ -163,8 +163,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--2">
         <button
-          @click="changePage('#51AB2C', 'Home')"
-          @mouseover="getPosition('.loader_welcome--2', '#51AB2C', 'Home')"
+          @click="changePage('#3bc461', 'Home')"
+          @mouseover="getPosition('.loader_welcome--2', '#3bc461', 'Home')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -173,8 +173,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--3">
         <button
-          @click="changePage('#9A3E29', 'CV')"
-          @mouseover="getPosition('.loader_welcome--3', '#9A3E29', 'CV')"
+          @click="changePage('#168fff', 'CV')"
+          @mouseover="getPosition('.loader_welcome--3', '#168fff', 'CV')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -183,8 +183,8 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
       </li>
       <li class="loader_welcome--4">
         <button
-          @click="changePage('#CCA1A3', 'Contact')"
-          @mouseover="getPosition('.loader_welcome--4', '#CCA1A3', 'Contact')"
+          @click="changePage('#FFE380', 'Contact')"
+          @mouseover="getPosition('.loader_welcome--4', '#FFE380', 'Contact')"
           @mouseleave="(hover = false), (iconText = '')"
           class="rounded"
         >
@@ -326,7 +326,7 @@ export default {
   color: #f4f4f4;
   background: transparent;
   & i {
-    @include font-size(1, 2);
+    @include font-size(1.2, 1.5);
   }
   &:hover {
     box-shadow: 1px 1px 25px 5px rgba(146, 148, 248, 0.4);
@@ -359,8 +359,7 @@ export default {
   justify-content: center;
   position: absolute;
   & P {
-    @include font-size(1, 1.5);
-    font-weight: bold;
+    @include font-size(1, 1.3);
   }
 }
 </style>

@@ -15,7 +15,7 @@ export default {
 h1 {
   @include font-size(2.5, 3);
   color: map.get($buttonColor, ".loader_welcome--2");
-  margin: 2vh 0vh;
+  margin: 5vh 0vh;
 }
 
 .content {

@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss">
 html {
-  @include font-size(0.5, 1.5);
+  @include font-size(0.7, 1.2);
   line-height: 1.2rem;
 }
 body {
