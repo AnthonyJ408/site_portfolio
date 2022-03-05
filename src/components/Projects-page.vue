@@ -19,7 +19,6 @@
             <i class="fa fa-github"></i
           ></a>
         </div>
-        <div class="carousel__item-anim"></div>
       </article>
     </div>
   </div>
@@ -122,6 +121,11 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: #{$widthMin}px) {
+        width: 90px;
+        height: 90px;
+        margin-right: -45px;
+      }
     }
     & a {
       text-decoration: none;
@@ -141,6 +145,9 @@ export default {
       background-color: rgba(255, 255, 255, 0.1);
       border-radius: 20px;
       padding: 16px 20px 16px 100px;
+      @media (max-width: #{$widthMin}px) {
+        padding: 16px 20px 16px 50px;
+      }
 
       & h2 {
         color: map.get($buttonColor, ".loader_welcome--1");
