@@ -1,18 +1,25 @@
 <template>
   <div class="content">
     <h1>Curriculum Vitae</h1>
-    <img
-      class="cv"
-      src="../assets/dev_web_cv.jpg"
-      alt="CV Anthony Jammes developer web "
-    />
-
-    <a
-      href="https://drive.google.com/uc?export=dowload&id=1eRrwyWDpCBaSoQ1Z3ueLTBj4D1RhR-_1"
-      target="_blank"
-      download
-      ><i class="fa fa-download"></i>
-    </a>
+    <div>
+      <img
+        class="cv"
+        src="../assets/dev_web_cv.jpg"
+        alt="CV Anthony Jammes developer web "
+      />
+    </div>
+    <div>
+      <a
+        href="https://drive.google.com/uc?export=dowload&id=1eRrwyWDpCBaSoQ1Z3ueLTBj4D1RhR-_1"
+        target="_blank"
+        download
+        >Download
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
   </div>
 </template>
 <script>
@@ -24,6 +31,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .content {
+  box-sizing: border-box;
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -52,24 +60,90 @@ export default {
     color: map.get($buttonColor, ".loader_welcome--3");
     @include font-size(2.5, 3);
     text-align: center;
-    margin: 3vh 0vh;
+    margin: 5vh 0vh;
   }
   & .cv {
     border-radius: 20px;
+    @media (max-width: #{$widthMin}px) {
+      width: 60%;
+    }
+    transform-origin: top;
+    animation: cvGrowth 1s ease-in-out backwards;
   }
   & a {
-    text-decoration: none;
-    @include font-size(1.5, 2.5);
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
     color: map.get($buttonColor, ".loader_welcome--3");
-    margin: 3vh 0vh;
-    padding: 20px 40px;
-    border: solid 2px;
-    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 40px;
+    font-size: 16px;
+    letter-spacing: 4px;
     &:hover {
-      transform: scale(1.2);
-      transition: all 500ms ease-in-out;
-      border: solid 1px;
-      opacity: 0.8;
+      background: map.get($buttonColor, ".loader_welcome--3");
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 15px map.get($buttonColor, ".loader_welcome--3");
+    }
+
+    & span {
+      position: absolute;
+      display: block;
+    }
+
+    & span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        map.get($buttonColor, ".loader_welcome--3")
+      );
+      animation: border-1 1s linear infinite;
+    }
+
+    & span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        transparent,
+        map.get($buttonColor, ".loader_welcome--3")
+      );
+      animation: border-2 1s linear infinite;
+      animation-delay: 0.25s;
+    }
+    & span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(
+        270deg,
+        transparent,
+        map.get($buttonColor, ".loader_welcome--3")
+      );
+      animation: border-3 1s linear infinite;
+    }
+    & span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(
+        360deg,
+        transparent,
+        map.get($buttonColor, ".loader_welcome--3")
+      );
+      animation: border-4 1s linear infinite;
+      animation-delay: 0.25s;
     }
   }
 }

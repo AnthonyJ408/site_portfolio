@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <img src="../assets/logo_aj.png" alt="Logo Jammes Anthony" />
     <p>Hello, i'm</p>
     <h1>Anthony Jammes.</h1>
     <p>I'm a web developer.</p>
@@ -12,8 +13,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+img {
+  margin: 2vh 0vh;
+  height: 20vh;
+}
 h1 {
-  @include font-size(2.5, 3);
+  @include font-size(1.8, 3);
   color: map.get($buttonColor, ".loader_welcome--2");
   margin: 5vh 0vh;
 }

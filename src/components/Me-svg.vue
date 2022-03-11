@@ -954,7 +954,10 @@ export default {
   transform: scale(3);
   position: absolute;
   top: 10vh;
-  right: 0vw;
+  @media (max-width: #{$widthMin}px) {
+    right: 5vh;
+  }
+  right: 2vw;
   & path {
     stroke: rgb(0, 0, 0);
     stroke-width: 5px;
