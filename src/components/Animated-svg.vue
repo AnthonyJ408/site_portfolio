@@ -273,7 +273,7 @@ c228 5 559 8 735 8 176 0 330 1 342 1 13 0 66 38 132 95 112 97 251 206 557
     </g>
   </svg>
 </template>
-<script>
+<script defer>
 export default {
   name: "AnimatedSvg",
   props: {

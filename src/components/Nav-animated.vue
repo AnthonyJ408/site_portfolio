@@ -144,6 +144,7 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
           @click="changePage('#F79B19', 'About Me')"
           @mouseover="getPosition('.loader_welcome--0', '#F79B19', 'About Me')"
           @mouseleave="(hover = false), (iconText = '')"
+          aria-label="About Page"
           class="rounded"
         >
           <i class="fa fa-user"></i>
@@ -156,6 +157,7 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
             getPosition('.loader_welcome--1', '#00A8CC', 'My Projects')
           "
           @mouseleave="(hover = false), (iconText = '')"
+          aria-label="Projects Page"
           class="rounded"
         >
           <i class="fa fa-code"></i>
@@ -166,6 +168,7 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
           @click="changePage('#3bc461', 'Home')"
           @mouseover="getPosition('.loader_welcome--2', '#3bc461', 'Home')"
           @mouseleave="(hover = false), (iconText = '')"
+          aria-label="Cv Page"
           class="rounded"
         >
           <i class="fa fa-home"></i>
@@ -176,6 +179,7 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
           @click="changePage('#168fff', 'CV')"
           @mouseover="getPosition('.loader_welcome--3', '#168fff', 'CV')"
           @mouseleave="(hover = false), (iconText = '')"
+          aria-label="Home Page"
           class="rounded"
         >
           <i class="fa fa-download"></i>
@@ -186,6 +190,7 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
           @click="changePage('#FFE380', 'Contact')"
           @mouseover="getPosition('.loader_welcome--4', '#FFE380', 'Contact')"
           @mouseleave="(hover = false), (iconText = '')"
+          aria-label="Contact Page"
           class="rounded"
         >
           <i class="fa fa-commenting-o"></i>
@@ -195,7 +200,7 @@ m2520 0 c25 -14 25 -56 -1 -70 -45 -24 -86 44 -42 69 21 13 20 13 43 1z"
   </nav>
 </template>
 
-<script>
+<script defer>
 export default {
   name: "NavAnimated",
   data() {

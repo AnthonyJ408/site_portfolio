@@ -2,12 +2,12 @@
   <div class="content">
     <img src="../assets/logo_aj.png" alt="Logo Jammes Anthony" />
     <p>Hello, i'm</p>
-    <h1>Anthony Jammes.</h1>
+    <h1>Anthony Jammes</h1>
     <p>I'm a web developer.</p>
     <p>Welcome on my website.</p>
   </div>
 </template>
-<script>
+<script defer>
 export default {
   name: "HomePage",
 };

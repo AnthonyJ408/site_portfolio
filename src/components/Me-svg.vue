@@ -921,7 +921,7 @@ c69 -1 124 14 124 35 0 8 5 14 10 14 6 0 10 5 10 10 0 12 -14 12 -55 -1z"
     </g>
   </svg>
 </template>
-<script>
+<script defer>
 export default {
   name: "MeSvg",
   props: {

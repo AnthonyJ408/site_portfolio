@@ -59,7 +59,7 @@
     </form>
   </div>
 </template>
-<script>
+<script defer>
 export default {
   name: "ContactPage",
   data() {

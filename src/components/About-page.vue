@@ -75,7 +75,7 @@
     </ul>
   </div>
 </template>
-<script>
+<script defer>
 export default {
   name: "AboutPage",
 };
