@@ -13,8 +13,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+p {
+  margin: 5px 0;
+}
+
 img {
-  width: 20%;
+  height: 30%;
 }
 h1 {
   @include font-size(1.8, 3);
