@@ -184,7 +184,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 73vh;
+  height: 70vh;
   width: 100%;
   border-radius: 3vh;
   box-shadow: 0px 0px 30px map.get($buttonColor, ".loader_welcome--1");

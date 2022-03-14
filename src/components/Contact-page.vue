@@ -277,7 +277,7 @@ form {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 73vh;
+  height: 70vh;
   border-radius: 3vh;
   box-shadow: 0px 0px 50px map.get($buttonColor, ".loader_welcome--4");
 }
