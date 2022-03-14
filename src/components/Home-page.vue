@@ -14,13 +14,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 img {
-  margin: 2vh 0vh;
-  height: 20vh;
+  width: 20%;
 }
 h1 {
   @include font-size(1.8, 3);
   color: map.get($buttonColor, ".loader_welcome--2");
-  margin: 5vh 0vh;
+  margin: 3vh 0vh;
 }
 
 .content {
@@ -46,7 +45,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  height: 73vh;
   border-radius: 3vh;
   box-shadow: 0px 0px 50px map.get($buttonColor, ".loader_welcome--2");
 }

@@ -106,7 +106,7 @@ form {
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.1);
   width: 80%;
-  height: 70%;
+  height: 50%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -277,7 +277,7 @@ form {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 73vh;
   border-radius: 3vh;
   box-shadow: 0px 0px 50px map.get($buttonColor, ".loader_welcome--4");
 }

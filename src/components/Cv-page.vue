@@ -63,6 +63,9 @@ export default {
     margin: 5vh 0vh;
   }
   & .cv {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 20px;
     @media (max-width: #{$widthMin}px) {
       width: 60%;
