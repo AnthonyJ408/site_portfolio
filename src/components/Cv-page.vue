@@ -4,13 +4,13 @@
     <div>
       <img
         class="cv"
-        src="../assets/dev_web_cv.jpg"
+        src="../assets/dev_web_cv.png"
         alt="CV Anthony Jammes developer web "
       />
     </div>
     <div>
       <a
-        href="https://drive.google.com/uc?export=dowload&id=1eRrwyWDpCBaSoQ1Z3ueLTBj4D1RhR-_1"
+        href="https://drive.google.com/file/d/1qa4qdS9yH2zMPkqxrA7R_B6-7cqdbQ4r/view?usp=sharing"
         target="_blank"
         download
         >Download
